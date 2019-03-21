@@ -1,8 +1,8 @@
 {
   "name": "@strong-platform/factories",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Data factories for common Strong Platform data",
-  "main": "src/common/factories.ts",
+  "main": "dist/factories.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Strong-Platform/factories.git"
@@ -15,10 +15,15 @@
   "homepage": "https://github.com/Strong-Platform/factories#readme",
   "dependencies": {
     "@strong-platform/types": "0.0.6",
-    "tslint": "^5.13.0",
-    "typescript": "^3.3.3333"
+    "tslint": "^5.14.0"
   },
   "scripts": {
-    "lint": "tslint './src/**/*.ts*' --format stylish --force"
+    "lint": "tslint './src/**/*.ts*' --format stylish --force",
+    "build": "npx tsc",
+    "register": "npm publish --access=public",
+    "update": "npm publich"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.4000"
   }
 }
