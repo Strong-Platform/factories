@@ -1,2 +1,24 @@
-# service-work-orders
-# factories
+# Typescript Types for Strong Platform
+
+- ApiSession
+- CartCoupon
+- CartItem, CartItemExpanded
+- CartCoupon
+- Charge
+- Coupon
+- Customer
+- CustomerActivity
+- CustomerPaymentAccount
+- CustomerSession
+- Event
+- Image, Thumbnail
+- Order
+- Product, ProductExpanded
+- ProductSubscriptionPlan
+- ProductVariant
+- Session
+- Shipment
+- ShippingAddress
+- ShippingFlaterateRule
+- ShippingOrigin
+- Subscription, SubscriptionExpanded

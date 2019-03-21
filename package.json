@@ -1,0 +1,24 @@
+{
+  "name": "@strong-platform/factories",
+  "version": "0.0.1",
+  "description": "Data factories for common Strong Platform data",
+  "main": "src/common/factories.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Strong-Platform/factories.git"
+  },
+  "author": "Ryan Mahoney",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Strong-Platform/factories/issues"
+  },
+  "homepage": "https://github.com/Strong-Platform/factories#readme",
+  "dependencies": {
+    "@strong-platform/types": "0.0.6",
+    "tslint": "^5.13.0",
+    "typescript": "^3.3.3333"
+  },
+  "scripts": {
+    "lint": "tslint './src/**/*.ts*' --format stylish --force"
+  }
+}
