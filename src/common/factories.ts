@@ -11,6 +11,8 @@ const overrideDefaultValues = (defaultRecord: object, updatedRecord: object) =>
 
 export const customerActivityFactory = (values: object): CustomerActivity => {
   const defaultValues = {
+    id: null,
+    user_id: null,
     session_id: "testsession",
     activity_type: "PAGE_VIEW",
     customer_id: null,

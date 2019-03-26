@@ -19,6 +19,8 @@ var overrideDefaultValues = function (defaultRecord, updatedRecord) {
 };
 exports.customerActivityFactory = function (values) {
     var defaultValues = {
+        id: null,
+        user_id: null,
         session_id: "testsession",
         activity_type: "PAGE_VIEW",
         customer_id: null,
