@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/Strong-Platform/factories#readme",
   "dependencies": {
-    "@strong-platform/types": "0.0.8",
+    "@strong-platform/types": "0.0.10",
     "tslint": "^5.14.0"
   },
   "scripts": {
