@@ -17,8 +17,34 @@ var overrideDefaultValues = function (defaultRecord, updatedRecord) {
         return (__assign({}, accumulator, (_a = {}, _a[key] = updatedRecord[key] || defaultRecord[key], _a)));
     }, {});
 };
+exports.customer = function (values) {
+    return overrideDefaultValues({
+        id: null,
+        email: "test@test.com",
+        password: null,
+        first_name: "First",
+        last_name: "Last",
+        created: new Date(),
+        deleted: null,
+        created_by: null,
+        last_referring_url: null,
+        last_referring_url_date: null,
+        last_affiliate: null,
+        last_affiliate_date: null,
+        last_utm_source: null,
+        last_utm_source_date: null,
+        last_utm_medium: null,
+        last_utm_medium_date: null,
+        last_utm_term: null,
+        last_utm_term_date: null,
+        last_utm_content: null,
+        last_utm_content_date: null,
+        last_utm_campaign: null,
+        last_utm_campaign_date: null
+    }, values);
+};
 exports.customerActivityFactory = function (values) {
-    var defaultValues = {
+    return overrideDefaultValues({
         id: null,
         user_id: null,
         session_id: "testsession",
@@ -39,7 +65,6 @@ exports.customerActivityFactory = function (values) {
         utm_content: null,
         utm_campaign: null,
         context: null
-    };
-    return overrideDefaultValues(defaultValues, values);
+    }, values);
 };
 //# sourceMappingURL=factories.js.map
