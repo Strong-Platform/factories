@@ -42,7 +42,7 @@ export const customerActivityFactory = (values: object): CustomerActivity =>
   overrideDefaultValues(
     {
       id: null,
-      user_id: null,
+      created_by: null,
       session_id: "testsession",
       activity_type: "PAGE_VIEW",
       customer_id: null,
