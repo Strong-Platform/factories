@@ -1,6 +1,6 @@
 {
   "name": "@strong-platform/factories",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Data factories for common Strong Platform data",
   "main": "dist/factories.js",
   "repository": {

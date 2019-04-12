@@ -1,24 +1,7 @@
 "use strict";
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var overrideDefaultValues = function (defaultRecord, updatedRecord) {
-    return Object.keys(defaultRecord).reduce(function (accumulator, key) {
-        var _a;
-        return (__assign({}, accumulator, (_a = {}, _a[key] = updatedRecord[key] || defaultRecord[key], _a)));
-    }, {});
-};
 exports.customer = function (values) {
-    return overrideDefaultValues({
+    return Object.assign({}, {
         id: null,
         email: "test@test.com",
         password: null,
@@ -44,7 +27,7 @@ exports.customer = function (values) {
     }, values);
 };
 exports.customerActivityFactory = function (values) {
-    return overrideDefaultValues({
+    return Object.assign({}, {
         id: null,
         created_by: null,
         session_id: "testsession",
@@ -65,6 +48,56 @@ exports.customerActivityFactory = function (values) {
         utm_content: null,
         utm_campaign: null,
         context: null
+    }, values);
+};
+exports.apiSessionFactory = function (values) {
+    return Object.assign({}, {
+        userId: null,
+        email: null
+    }, values);
+};
+exports.userFactory = function (values) {
+    return Object.assign({}, {
+        id: null,
+        email: null,
+        password: null,
+        first_name: "first",
+        last_name: "last",
+        email_verified: null,
+        created: new Date(),
+        modified: new Date()
+    }, values);
+};
+exports.productFactory = function (values) {
+    return Object.assign({}, {
+        id: null,
+        name: "Product",
+        slug: "product",
+        description: "a product",
+        images: [],
+        shipping_origin_id: null,
+        shipping_calculation_type: "none",
+        shipping_calculation_flat_rate_rule_id: null,
+        created: new Date(),
+        deleted: null,
+        created_by: null
+    }, values);
+};
+exports.productVariantFactory = function (values) {
+    return Object.assign({}, {
+        id: null,
+        sku: "sku",
+        description: "description",
+        size: "medium",
+        color: "green",
+        style: "retro",
+        images: [],
+        product_id: null,
+        price: 5.0,
+        price_compare: 6.0,
+        created: new Date(),
+        deleted: null,
+        created_by: null
     }, values);
 };
 //# sourceMappingURL=factories.js.map
