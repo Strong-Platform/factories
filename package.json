@@ -1,6 +1,6 @@
 {
   "name": "@strong-platform/factories",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Data factories for common Strong Platform data",
   "main": "dist/factories.js",
   "repository": {
@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/Strong-Platform/factories#readme",
   "dependencies": {
-    "@strong-platform/types": "0.0.10",
+    "@strong-platform/types": "0.0.11",
     "tslint": "^5.14.0"
   },
   "scripts": {
