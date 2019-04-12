@@ -1,16 +1,15 @@
-import { CustomerActivity, Customer } from "@strong-platform/types";
+import {
+  ApiSession,
+  Customer,
+  CustomerActivity,
+  Product,
+  ProductVariant,
+  User
+} from "@strong-platform/types";
 
-const overrideDefaultValues = (defaultRecord: object, updatedRecord: object) =>
-  Object.keys(defaultRecord).reduce(
-    (accumulator, key) => ({
-      ...accumulator,
-      [key]: updatedRecord[key] || defaultRecord[key]
-    }),
-    {}
-  );
-
-export const customer = (values: object): Customer =>
-  overrideDefaultValues(
+export const customer = (values: Partial<Customer>): Customer =>
+  Object.assign(
+    {},
     {
       id: null,
       email: "test@test.com",
@@ -36,10 +35,13 @@ export const customer = (values: object): Customer =>
       last_utm_campaign_date: null
     },
     values
-  ) as Customer;
+  );
 
-export const customerActivityFactory = (values: object): CustomerActivity =>
-  overrideDefaultValues(
+export const customerActivityFactory = (
+  values: Partial<CustomerActivity>
+): CustomerActivity =>
+  Object.assign(
+    {},
     {
       id: null,
       created_by: null,
@@ -64,3 +66,71 @@ export const customerActivityFactory = (values: object): CustomerActivity =>
     },
     values
   ) as CustomerActivity;
+
+export const apiSessionFactory = (values: Partial<ApiSession>): ApiSession =>
+  Object.assign(
+    {},
+    {
+      userId: null,
+      email: null
+    },
+    values
+  );
+
+export const userFactory = (values: Partial<User>): User =>
+  Object.assign(
+    {},
+    {
+      id: null,
+      email: null,
+      password: null,
+      first_name: "first",
+      last_name: "last",
+      email_verified: null,
+      created: new Date(),
+      modified: new Date()
+    },
+    values
+  );
+
+export const productFactory = (values: Partial<Product>): Product =>
+  Object.assign(
+    {},
+    {
+      id: null,
+      name: "Product",
+      slug: "product",
+      description: "a product",
+      images: [],
+      shipping_origin_id: null,
+      shipping_calculation_type: "none",
+      shipping_calculation_flat_rate_rule_id: null,
+      created: new Date(),
+      deleted: null,
+      created_by: null
+    },
+    values
+  );
+
+export const productVariantFactory = (
+  values: Partial<ProductVariant>
+): ProductVariant =>
+  Object.assign(
+    {},
+    {
+      id: null,
+      sku: "sku",
+      description: "description",
+      size: "medium",
+      color: "green",
+      style: "retro",
+      images: [],
+      product_id: null,
+      price: 5.0,
+      price_compare: 6.0,
+      created: new Date(),
+      deleted: null,
+      created_by: null
+    },
+    values
+  );
